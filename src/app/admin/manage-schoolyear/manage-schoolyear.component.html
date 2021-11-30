@@ -1,0 +1,130 @@
+<div class="class-info" >
+    <div class="d-flex flex-row">
+        <div class="col-md-3">
+            <div class="card card1 p-3">
+                <div class=" image d-flex flex-row align-items-center mt-3" style="align-items: center;justify-content: center;"> <span>Admin Dashboard</span> </div>
+                <hr class="hline">
+                <div class="d-flex flex-column align-items-center"> 
+                    <button class="btn " routerLink="/admin-dash"><span>Dashboard</span></button> 
+                    <button class="btn mt-3 " routerLink="/class-info"><span>Class Info</span></button> 
+                    <button class="btn mt-3 " routerLink="/subjects"><span>Subjects</span></button> 
+                  
+                    <button class="btn mt-3 " routerLink="/students"><span>Students</span></button> 
+                    <button class="btn mt-3" routerLink="/teachers"><span>Teachers</span></button> 
+                    <button class="btn mt-3" routerLink="/settings"><span>Settings</span></button> 
+                    <button class="btn mt-3" routerLink="/users"><span>Users</span></button>  
+                    <button class="btn mt-3 " routerLink="/advisories"><span>Manage Advisories</span></button>  
+                    <button class="btn mt-3 active" routerLink="/manageSY"><span>Manage Schoolyear</span></button>  
+
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9" style="position:relative;">
+            <div class="card card2 p-3" >
+                <app-header></app-header>
+
+                <div class="hello d-flex justify-content-baseline align-items-center mt-3"> 
+                    <span style="text-transform:uppercase; font-size: 2rem; margin-bottom: 10px;">Manage School Year</span>
+                    
+
+                    
+                </div>
+               
+                <div class="pages">
+                    <a><i class="fas fa-tachometer-alt" style="margin-right: 8px;"></i>Dashboard  /  Advisories</a>
+                </div>
+                <div class="" style="display: flex; gap: 6px;align-items: center; padding-bottom:20px ;padding-top :20px ;" >
+                   
+                    
+                        
+
+                    
+                    
+                    <button type='submit' class="butt btn-primary" data-bs-toggle="modal" data-bs-target="#addsy" ><i class="fas fa-plus" style="margin-right: 5px;"></i>Add School Year</button>
+                    
+
+                    
+                    
+                </div>
+                
+                <div class="tables" style="overflow-y: scroll; overflow-x: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);" >
+                    <div class="tables" style="overflow-y: scroll; overflow-x: hidden; background-color: white;">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">School year</th>
+                                <th scope="col">Status</th>
+                                
+                                <th scope="col">Actions</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let sy of sy">
+                                
+                                <td scope="row">{{ sy.id }}</td>
+                                <td >{{ sy.schoolyear }}</td>
+                                <td *ngIf="sy.status=='active'"> <i class="fas fa-circle" style="color: 	#22bb33;"></i>  {{ sy.status }}</td>
+                                <td *ngIf="sy.status=='inactive'"> <i class="fas fa-circle" style="color: 	#bb2124;"></i>  {{ sy.status }}</td>
+                                
+                                
+                                <td *ngIf="sy.status=='active'" ><button (click)="setActive(sy.id,'inactive')" type='submit' class="butt btn-primary" >Set as Inactive</button>
+                                </td>
+                                <td *ngIf="sy.status=='inactive'" ><button (click)="setActive(sy.id,'active')" type='submit' class="butt btn-primary" >Set as Active</button></td>
+
+                              </tr>
+                              
+                              
+                              
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
+<!-- Modals -->
+
+
+<div class="modal fade" id="addsy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Feed</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group" style="margin-bottom: 50px;">
+                <label for="from">Enter School Year</label>
+                <div class="inputs" style="display: flex; gap:10px; align-items: center;">
+                  <input [(ngModel)]="syear1" type="text" maxlength="4" name="from"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  <b>-</b>
+                  <input [(ngModel)]="syear2" type="text" maxlength="4" name="from"   class="form-control" id="exampleInputEmail1"  >
+
+
+                </div>
+
+            </div>
+            
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button"  (click)="addSchoolYear()" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+</div> 
+
+
+
+
+<app-added id="add_toast"></app-added>
+<app-toast1 id="delete_toast"></app-toast1>
+
+<app-update id="updatetoast"></app-update>
