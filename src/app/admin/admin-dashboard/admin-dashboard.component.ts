@@ -20,22 +20,22 @@ export class AdminDashboardComponent implements OnInit {
   }
   getSubjects(){
     this.api.getSubjects().subscribe(res=>{
-      console.log(res);
+//       console.log(res);
       this.subjectsLength=res;
       // console.log(this.subjectsLength);
     })
     this.api.getTeachersData().subscribe(res=>{
-      console.log(res);
+//       console.log(res);
       this.teachersLength=res;
       
     })
     this.api.getStudents().subscribe(res=>{
-      console.log(res);
+//       console.log(res);
       this.studentsLength=res;
       
     })
     this.api.getUsers().subscribe(res=>{
-      console.log(res);
+//       console.log(res);
       this.usersLength=res;
       
     })
