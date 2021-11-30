@@ -22,27 +22,27 @@ export class ApiService {
   
 
   getClassInfo(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getClassInfo.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getClassInfo.php');
 
   }
   getAccount(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getaccounts.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getaccounts.php');
   }
   // students page
   getStudents(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getStudents.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getStudents.php');
   }
   addStudent(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addStudent.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addStudent.php',data);
   }
   deleteStudent(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteStudent.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteStudent.php?id='+id);
   }
   searchStudent(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/searchStudent.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/searchStudent.php?id='+id);
   }
   editStudent(id:any,data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/editStudent.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/editStudent.php?id='+id,data);
   }
 
 
@@ -51,69 +51,69 @@ export class ApiService {
   // 
   //subjectpage
   getSingleSubject(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getSingleSubject.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getSingleSubject.php?id='+id);
   }
   updateSubject(id:any,data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/updateSubject.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/updateSubject.php?id='+id,data);
 
   }
   searchSubject(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/searchSubject.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/searchSubject.php?id='+id);
   }
 
   //
 
   searchClass(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/searchClass.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/searchClass.php?id='+id);
   }
   getSubjects(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getSubjects.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getSubjects.php');
   }
 
   // teacher page
 
   getTeachersData(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getTeachersData.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getTeachersData.php');
   }
   searchTeacher(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/searchTeacher.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/searchTeacher.php?id='+id);
   }
   updateTeacher(id:any,data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/updateTeacher.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/updateTeacher.php?id='+id,data);
   }
 
 // 
 
   getUsers(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getUsers.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getUsers.php');
   }
 
   deleteUser(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteUser.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteUser.php?id='+id);
   }
 
   addSubject(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addSubject.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addSubject.php',data);
   }
   deleteSubject(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteSubject.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteSubject.php?id='+id);
   }
   getIndividualTeacher(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getIndividualTeacher.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getIndividualTeacher.php?id='+id);
   }
   getIndividualStudent(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getIndividualStudent.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getIndividualStudent.php?id='+id);
   }
 
   getEnrolledStudents(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getEnrolledStudents.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getEnrolledStudents.php?id='+id);
   }
 
   enrollToClass(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/enrollToClass.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/enrollToClass.php',data);
   }
   deleteEnrolledStudent(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteEnrolledStudent.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteEnrolledStudent.php?id='+id);
   }
 
   
@@ -124,42 +124,42 @@ export class ApiService {
 
 
   getUserPassword(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getUserPassword.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getUserPassword.php?id='+id);
   }
   updateUserPassword(id:any,data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/updatePassword.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/updatePassword.php?id='+id,data);
   }
   searchUser(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/searchUser.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/searchUser.php?id='+id);
   }
   getStrand(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getStrands.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getStrands.php');
   }
   getSY(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getSY.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getSY.php');
   }
   getLevel(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getLevel.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getLevel.php');
   }
   addClass(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addClass.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addClass.php',data);
   }
   deleteClass(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteClass.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteClass.php?id='+id);
   }
   assignTeacher(data:any,id:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/assignTeacher.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/assignTeacher.php?id='+id,data);
   }
 
   // Teacher
   addTeacher(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addTeacher.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addTeacher.php',data);
   }
   deleteTeacher(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteTeacher.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteTeacher.php?id='+id);
   }
   addUserData(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addUserData.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addUserData.php',data);
   }
 
 
@@ -167,36 +167,36 @@ export class ApiService {
   // facultyDash
 
   getTeacherInfo(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getTeacherInfo.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getTeacherInfo.php?id='+id);
   }
   getClass(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getClass.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getClass.php?id='+id);
   }
   getTeacherStudents  (id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getTeacherStudents.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getTeacherStudents.php?id='+id);
   }
 
 
   // student page
 
   getClassesStudents(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getClassesStudents.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getClassesStudents.php?id='+id);
   }
   updateGrades(data:any,id:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/updateGrades.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/updateGrades.php?id='+id,data);
   }
 
 
 
 
   getAdvisories(){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/getAdvisories.php');
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/getAdvisories.php');
   }
   addAdvisories(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addAdvisories.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addAdvisories.php',data);
   }
   deleteAdvisories(id:any){
-    return this.http.get('http://localhost/Projects/Admin-faculty/backend/deleteAdvisories.php?id='+id);
+    return this.http.get('https://btihs-portal-backend.herokuapp.com/deleteAdvisories.php?id='+id);
   }
 
 
@@ -204,10 +204,10 @@ export class ApiService {
 
 
   addSY(data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/addSY.php',data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/addSY.php',data);
   }
   setActiveSY(id:any,data:any){
-    return this.http.post('http://localhost/Projects/Admin-faculty/backend/setActiveSY.php?id='+id,data);
+    return this.http.post('https://btihs-portal-backend.herokuapp.com/setActiveSY.php?id='+id,data);
   }
   
 }
