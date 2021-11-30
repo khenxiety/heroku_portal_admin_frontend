@@ -25,7 +25,7 @@ export class ManageSchoolyearComponent implements OnInit {
   }
   getSchoolYear(){
     this.api.getSY().subscribe(res=>{
-      console.log(res)
+//       console.log(res)
       this.sy=res
     },
     err=>{
@@ -41,7 +41,7 @@ export class ManageSchoolyearComponent implements OnInit {
       sy:sy
     }
     this.api.addSY(data).subscribe((res: any)=>{
-      console.log(res)
+//       console.log(res)
       this.getSchoolYear()
     },
       (    err: any)=>{
@@ -57,7 +57,7 @@ export class ManageSchoolyearComponent implements OnInit {
       
     }
     this.api.setActiveSY(id,data).subscribe((res: any)=>{
-      console.log(res)
+//       console.log(res)
       this.getSchoolYear()
     },
       (    err: any)=>{
