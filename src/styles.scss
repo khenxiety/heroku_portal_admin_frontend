@@ -24,6 +24,7 @@ body{
     height: 100vh;
     width: 100vw;position: relative;
     background: linear-gradient(rgba(56, 57, 75, 0.918),rgba(74, 82, 100, 0.849)),url('./assets/DroneBauan.jpg') no-repeat center center fixed;
+    background-size:cover;
 }
 ::-webkit-scrollbar{
     width: 6px;
